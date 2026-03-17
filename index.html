@@ -3,63 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neha A | Portfolio</title>
+<title>Neha A | AI/ML Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #e0e7ff, #f0f4ff);
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  color: #fff;
 }
 
 header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #7c83fd;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 14px;
 }
 
 .section {
-  padding: 40px 20px;
-  max-width: 1000px;
+  padding: 60px 20px;
+  max-width: 1100px;
   margin: auto;
 }
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  background: #6366f1;
-  color: white;
-  cursor: pointer;
+a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.skills span {
+  display: inline-block;
+  background: #3b3b5c;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 12px;
 }
 
 footer {
   text-align: center;
   padding: 20px;
   background: #111;
-  color: white;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -69,28 +94,23 @@ footer {
 <header>
   <h1>Neha A</h1>
   <p>AI/ML Engineer | Computer Vision Enthusiast</p>
-  <p>Building intelligent systems using deep learning & AI</p>
+  <p>Building intelligent systems using deep learning, computer vision & generative AI</p>
+
   <button onclick="document.getElementById('projects').scrollIntoView()">View Projects</button>
+  <a href="resume.pdf" download><button>Download Resume</button></a>
 </header>
 
 <section class="section">
   <h2>About Me</h2>
-  <p>Computer Science student with experience in computer vision, deep learning, and software development. Skilled in Python, REST APIs, and full-stack development.</p>
-</section>
-
-<section class="section">
-  <h2>Education</h2>
-  <p>PES University, Bengaluru (2022–2026)</p>
+  <p>Computer Science student specializing in AI/ML with hands-on experience in deep learning, computer vision, and full-stack development. Passionate about building intelligent systems that solve real-world problems.</p>
 </section>
 
 <section class="section">
   <h2>Experience</h2>
-  <p><b>Bharat Electronics Limited - Intern</b></p>
-  <ul>
-    <li>Built YOLOv8 pipeline for real-time detection</li>
-    <li>Developed regression model for 2D to 3D mapping</li>
-    <li>Integrated with Unity3D digital twin</li>
-  </ul>
+  <div class="card">
+    <h3>Bharat Electronics Limited – Intern</h3>
+    <p>Developed a real-time YOLOv8-based computer vision pipeline for CCTV streams with multi-person tracking. Built regression models for 2D–3D mapping and integrated with Unity3D for digital twin visualization.</p>
+  </div>
 </section>
 
 <section class="section" id="projects">
@@ -99,22 +119,26 @@ footer {
 
     <div class="card">
       <h3>Yoga Motion Generation</h3>
-      <p>CVAE-based model generating yoga poses using 3D keypoints.</p>
+      <p>Generated realistic yoga sequences using CVAE with GRU encoder-decoder and velocity-aware loss for smooth motion.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
     </div>
 
     <div class="card">
       <h3>Dermatology AI</h3>
-      <p>Zero-shot classification of 16+ skin diseases.</p>
+      <p>Zero-shot classification of 16+ skin conditions using MONet foundation model with GPU inference.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
     </div>
 
     <div class="card">
       <h3>PharmaTrack</h3>
-      <p>Pharmacy system handling 10K+ daily transactions.</p>
+      <p>Full-stack pharmacy system handling 10K+ daily transactions with REST APIs and 99.5% uptime.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
     </div>
 
     <div class="card">
       <h3>Gym Management System</h3>
-      <p>Web app for managing memberships and trainers.</p>
+      <p>Web-based system for managing memberships, trainers, and schedules with clean UI and database integration.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
     </div>
 
   </div>
@@ -122,17 +146,29 @@ footer {
 
 <section class="section">
   <h2>Skills</h2>
-  <p>Python | C++ | ML | Computer Vision | Docker | AWS | REST APIs</p>
+  <div class="skills">
+    <span>Python</span>
+    <span>C++</span>
+    <span>Deep Learning</span>
+    <span>Computer Vision</span>
+    <span>PyTorch</span>
+    <span>Docker</span>
+    <span>AWS</span>
+    <span>REST APIs</span>
+    <span>MySQL</span>
+  </div>
 </section>
 
 <section class="section">
   <h2>Contact</h2>
   <p>Email: neha.anirudda@gmail.com</p>
   <p>Phone: +91 8748099109</p>
+  <p><a href="https://linkedin.com/in/neha-anirudda" target="_blank">LinkedIn</a></p>
+  <p><a href="https://github.com/neha-anirudda" target="_blank">GitHub</a></p>
 </section>
 
 <footer>
-  <p>Built by Neha | Hosted on Netlify</p>
+  <p>Built with ❤️ by Neha | Hosted Portfolio</p>
 </footer>
 
 </body>
