@@ -20,6 +20,7 @@ body {
   color: #e5e7eb;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 120px 20px 100px;
@@ -28,27 +29,24 @@ header {
 h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
   background: linear-gradient(90deg, #a5b4fc, #818cf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 header p:first-of-type {
-  font-size: 1.1rem;
   color: #a5b4fc;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 header p:nth-of-type(2) {
   max-width: 600px;
   margin: 0 auto 30px;
-  font-size: 1rem;
   color: #cbd5f5;
   line-height: 1.6;
 }
 
+/* BUTTONS */
 button {
   padding: 12px 28px;
   border: none;
@@ -57,15 +55,15 @@ button {
   color: white;
   cursor: pointer;
   margin: 10px;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 button:hover {
-  transform: translateY(-3px) scale(1.03);
+  transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(99,102,241,0.4);
 }
 
+/* SECTIONS */
 .section {
   padding: 80px 20px;
   max-width: 1000px;
@@ -74,7 +72,7 @@ button:hover {
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -88,12 +86,7 @@ h2::after {
   bottom: -8px;
 }
 
-.section p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #d1d5db;
-}
-
+/* PROJECT CARDS */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -105,52 +98,41 @@ h2::after {
   padding: 25px;
   border-radius: 20px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .card h3 {
-  margin-bottom: 10px;
   color: #c7d2fe;
 }
 
-.card p {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
 .card a {
-  font-size: 0.9rem;
   color: #a5b4fc;
+  font-size: 14px;
 }
 
+/* SKILLS */
 .skills span {
   display: inline-block;
   background: rgba(99,102,241,0.2);
   padding: 8px 14px;
   margin: 6px;
   border-radius: 20px;
-  font-size: 13px;
-  transition: 0.3s;
 }
 
 .skills span:hover {
   background: #6366f1;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 20px;
   background: #111827;
-  font-size: 14px;
-  color: #9ca3af;
 }
-
 </style>
 </head>
 
@@ -162,6 +144,7 @@ footer {
   <p>Building practical, scalable solutions by combining intelligent systems with real-world software development</p>
 
   <button onclick="document.getElementById('projects').scrollIntoView()">View Projects</button>
+  
   <a href="Neha_Intern.pdf" download>
     <button>Download Resume</button>
   </a>
@@ -170,9 +153,68 @@ footer {
 <section class="section">
   <h2>About Me</h2>
   <p>
-    I’m a Computer Science student who enjoys building real-world applications using a mix of AI, software development, and cloud technologies. From developing computer vision models to creating full-stack systems, I focus on building solutions that are practical, scalable, and impactful.
+    I’m a Computer Science student who enjoys building real-world applications using a mix of AI, software development, and cloud technologies. 
+    From developing computer vision models to creating full-stack systems, I focus on building solutions that are practical, scalable, and impactful.
   </p>
 </section>
+
+<section class="section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+      <h3>Yoga Motion Generation</h3>
+      <p>Generated realistic yoga sequences using CVAE with GRU encoder-decoder and motion consistency techniques.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>Dermatology AI</h3>
+      <p>Zero-shot classification of 16+ skin conditions using MONet foundation model.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>PharmaTrack</h3>
+      <p>Full-stack pharmacy system handling 10K+ daily transactions with REST APIs.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>Gym Management System</h3>
+      <p>Web app for managing memberships, trainers, and schedules.</p>
+      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>C++</span>
+    <span>Deep Learning</span>
+    <span>Computer Vision</span>
+    <span>PyTorch</span>
+    <span>Docker</span>
+    <span>AWS</span>
+    <span>REST APIs</span>
+    <span>MySQL</span>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Contact</h2>
+  <p>Email: neha.anirudda@gmail.com</p>
+  <p><a href="https://linkedin.com/in/neha-anirudda" target="_blank">LinkedIn</a></p>
+  <p><a href="https://github.com/neha-anirudda" target="_blank">GitHub</a></p>
+</section>
+
+<footer>
+  <p>Built by Neha 🚀</p>
+</footer>
 
 </body>
 </html>
