@@ -3,47 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neha A | AI/ML Portfolio</title>
+<title>Neha A | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
-  color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #2b2d42, #1a1b2f);
+  color: #e5e7eb;
 }
 
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px 100px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #a5b4fc, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p:first-of-type {
+  font-size: 1.1rem;
+  color: #a5b4fc;
   margin-bottom: 10px;
 }
 
-p {
+header p:nth-of-type(2) {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1rem;
+  color: #cbd5f5;
   line-height: 1.6;
 }
 
 button {
-  padding: 12px 25px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 25px;
-  background: #7c83fd;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
   color: white;
   cursor: pointer;
   margin: 10px;
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.4);
 }
 
 .section {
-  padding: 60px 20px;
-  max-width: 1100px;
+  padding: 80px 20px;
+  max-width: 1000px;
   margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #818cf8;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+.section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d1d5db;
 }
 
 .card-container {
@@ -53,39 +101,56 @@ button {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
   padding: 25px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-a {
+.card h3 {
+  margin-bottom: 10px;
+  color: #c7d2fe;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.card a {
+  font-size: 0.9rem;
   color: #a5b4fc;
-  text-decoration: none;
 }
 
 .skills span {
   display: inline-block;
-  background: #3b3b5c;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 15px;
-  font-size: 12px;
+  background: rgba(99,102,241,0.2);
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #6366f1;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #111;
+  padding: 25px;
+  background: #111827;
   font-size: 14px;
+  color: #9ca3af;
 }
+
 </style>
 </head>
 
@@ -97,7 +162,6 @@ footer {
   <p>Building practical, scalable solutions by combining intelligent systems with real-world software development</p>
 
   <button onclick="document.getElementById('projects').scrollIntoView()">View Projects</button>
-  
   <a href="Neha_Intern.pdf" download>
     <button>Download Resume</button>
   </a>
@@ -106,76 +170,9 @@ footer {
 <section class="section">
   <h2>About Me</h2>
   <p>
-    I’m a Computer Science student who enjoys building real-world applications using a mix of AI, software development, and cloud technologies. 
-    From developing computer vision models to creating full-stack systems, I focus on building solutions that are practical, scalable, and impactful.
+    I’m a Computer Science student who enjoys building real-world applications using a mix of AI, software development, and cloud technologies. From developing computer vision models to creating full-stack systems, I focus on building solutions that are practical, scalable, and impactful.
   </p>
 </section>
-
-<section class="section">
-  <h2>Experience</h2>
-  <div class="card">
-    <h3>Bharat Electronics Limited – Intern</h3>
-    <p>Developed a real-time YOLOv8-based computer vision pipeline for CCTV streams with multi-person tracking. Built regression models for 2D–3D mapping and integrated with Unity3D for digital twin visualization.</p>
-  </div>
-</section>
-
-<section class="section" id="projects">
-  <h2>Projects</h2>
-  <div class="card-container">
-
-    <div class="card">
-      <h3>Yoga Motion Generation</h3>
-      <p>Generated realistic yoga sequences using CVAE with GRU encoder-decoder and velocity-aware loss for smooth motion.</p>
-      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
-    </div>
-
-    <div class="card">
-      <h3>Dermatology AI</h3>
-      <p>Zero-shot classification of 16+ skin conditions using MONet foundation model with GPU inference.</p>
-      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
-    </div>
-
-    <div class="card">
-      <h3>PharmaTrack</h3>
-      <p>Full-stack pharmacy system handling 10K+ daily transactions with REST APIs and 99.5% uptime.</p>
-      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
-    </div>
-
-    <div class="card">
-      <h3>Gym Management System</h3>
-      <p>Web-based system for managing memberships, trainers, and schedules with clean UI and database integration.</p>
-      <a href="https://github.com/neha-anirudda" target="_blank">View Project →</a>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Python</span>
-    <span>C++</span>
-    <span>Deep Learning</span>
-    <span>Computer Vision</span>
-    <span>PyTorch</span>
-    <span>Docker</span>
-    <span>AWS</span>
-    <span>REST APIs</span>
-    <span>MySQL</span>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Contact</h2>
-  <p>Email: neha.anirudda@gmail.com</p>
-
-  <p><a href="https://linkedin.com/in/neha-anirudda" target="_blank">LinkedIn</a></p>
-  <p><a href="https://github.com/neha-anirudda" target="_blank">GitHub</a></p>
-</section>
-
-<footer>
-  <p>Built with ❤️ by Neha | Hosted Portfolio</p>
-</footer>
 
 </body>
 </html>
